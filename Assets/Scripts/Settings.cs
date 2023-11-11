@@ -41,7 +41,6 @@ public static class Settings{
     public static void DeleteFile(string filename) => new FileInfo(@$"{filename}").Delete();
 
     public static void ButtonSetEnabled(Button button){
-        if (!button.enabled)
-            button.GetComponent<Image>().color = Color.grey;
+        if (!button.enabled) button.GetComponent<Image>().color = Color.grey;
     }
 }

@@ -5,6 +5,7 @@ using TMPro;
 using TMPro.EditorUtilities;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour{
@@ -22,13 +23,21 @@ public class Player : MonoBehaviour{
     [SerializeField] private new Camera camera;
     [SerializeField] private Canvas menuPause;
     [SerializeField] private Canvas inventory;
+    [SerializeField] private Canvas dialogMenu;
 
     private void Awake(){
         SetHP(maxHP);
         currentJumps = maxJumps;
         rigidbody = GetComponent<Rigidbody>();
-        this.AddComponent<GameScene>();
-        gameScene = GetComponent<GameScene>();
+        if (SceneManager.GetActiveScene().name == "Game"){
+            this.AddComponent<GameMainScene>();
+            gameScene = GetComponent<GameMainScene>();
+            dialogMenu.gameObject.SetActive(false);
+        }
+        else if (SceneManager.GetActiveScene().name == "DialogTest"){
+            this.AddComponent<GameDialogScene>();
+            gameScene = GetComponent<GameDialogScene>();
+        }
         gameScene.menuPause = menuPause;
         inventory.gameObject.SetActive(false);
     }
@@ -56,33 +65,29 @@ public class Player : MonoBehaviour{
     public void SetCurrentJumps(int countJumps) => currentJumps = countJumps;
 
     public void IndependentAction(){
-        if (Input.GetKeyDown(KeyCode.Escape))
-            gameScene.SetMenuPause();
+        if (Input.GetKeyDown(KeyCode.Escape)) gameScene.SetMenuPause();
     }
 
-    public void Update(){
+    public void Action(){
         IndependentAction();
-        if (!gameScene.GetIsPlayGame()){
+        if (!gameScene.GetIsPlayGame() || !gameScene.isDialogExit){
             rigidbody.velocity = new Vector3(0, 0, 0);
             return;
         }
         move = new Vector3(Input.GetAxis("Horizontal") * speed, rigidbody.velocity.y, Input.GetAxis("Vertical") * speed);
         transform.rotation *= Quaternion.Euler(-Input.GetAxis("Mouse Y") * Time.deltaTime * Settings.rotationSpeed, Input.GetAxis("Mouse X") * Time.deltaTime * Settings.rotationSpeed, 0);
         transform.rotation = Quaternion.Euler(Math.Max(Math.Min(Math.Abs(transform.rotation.eulerAngles.x - 360) < 25f? transform.rotation.eulerAngles.x - 360: transform.rotation.eulerAngles.x, 25f), -10f), transform.rotation.eulerAngles.y, 0);
-        if (Input.GetKeyDown(KeyCode.H))
-            GetHeal(10);
+        if (Input.GetKeyDown(KeyCode.H)) GetHeal(10);
         if (Input.GetKeyDown(KeyCode.Space) && currentJumps > 0){
             currentJumps--;
             move.y = (jumpSpeed - Physics.gravity.y);
         }
         rigidbody.velocity = Quaternion.Euler(0, camera.transform.rotation.eulerAngles.y, 0) * move;
-        if (Input.GetKeyDown(KeyCode.I))
-            inventory.gameObject.SetActive(!inventory.gameObject.activeSelf);
+        if (Input.GetKeyDown(KeyCode.I)) inventory.gameObject.SetActive(!inventory.gameObject.activeSelf);
     }
 
     private void OnCollisionEnter(Collision collision){
-        if (collision.gameObject.CompareTag("Ground"))
-            currentJumps = maxJumps;
+        if (collision.gameObject.CompareTag("Ground")) currentJumps = maxJumps;
         if (collision.gameObject.CompareTag("Item"))
             if (CollectItem(collision.gameObject.GetComponent<Item>()))
                 Destroy(collision.gameObject);
@@ -102,5 +107,10 @@ public class Player : MonoBehaviour{
                 return true;
             }
         return false;
+    }
+
+    public void ChoiceDialogVariant(int number){
+        gameScene.GetComponent<GameDialogScene>().ChoiceVariant(number);
+        dialogMenu.gameObject.SetActive(false);
     }
 }

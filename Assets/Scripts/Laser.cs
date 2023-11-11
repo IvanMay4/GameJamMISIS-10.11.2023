@@ -9,10 +9,8 @@ public class Laser : MonoBehaviour{
     [SerializeField] private int direction = 1;
 
     private void Update(){
-        if (transform.position.z >= maxZ)
-            direction = -1;
-        else if (transform.position.z <= minZ)
-            direction = 1;
+        if (transform.position.z >= maxZ) direction = -1;
+        else if (transform.position.z <= minZ) direction = 1;
         transform.position = new Vector3(0, 0, transform.position.z + speed * direction);
     }
 
