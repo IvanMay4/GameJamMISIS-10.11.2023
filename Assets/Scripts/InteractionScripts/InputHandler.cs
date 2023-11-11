@@ -30,7 +30,7 @@ namespace VHS
         void GetInteractionInput()
         {
             interactionInput.IntercatedClicked = Input.GetKeyDown(KeyCode.E);
-            interactionInput.IntercatedRelease = Input.GetKeyDown(KeyCode.E);
+            interactionInput.IntercatedRelease = Input.GetKey(KeyCode.E);
         }
         #endregion
     }
