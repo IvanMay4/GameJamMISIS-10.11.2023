@@ -66,13 +66,13 @@ public class GameScene : MonoBehaviour{
         if (Settings.isLoadGame){
             Settings.isLoadGame = false;
             LoadGame();
-        }
+        }/*
         for (int i = 0; i < enemies.Length; i++)
             if (enemies[i].GetHP() <= 0)
-                DeleteEnemy(i);
+                DeleteEnemy(i);*/
         if (player.GetHP() == 0)
             Settings.OpenGameOver();
-        else if (enemies.Length == 0)
-            Settings.OpenWin();
+        /*else if (enemies.Length == 0)
+            Settings.OpenWin();*/
     }
 }
