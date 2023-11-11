@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Enemy
   - Ground
+  - Wall
+  - HiddenWall
+  - Item
+  - ItemUI
   layers:
   - Default
   - TransparentFX

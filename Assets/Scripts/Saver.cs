@@ -32,8 +32,7 @@ public static class Saver{
         valuesPlayer = reader.ReadLine().Split();
         int countEnemies = Convert.ToInt32(reader.ReadLine());
         valuesEnemies = new string[countEnemies][];
-        for (int i = 0; i < countEnemies; i++)
-            valuesEnemies[i] = reader.ReadLine().Split();
+        for (int i = 0; i < countEnemies; i++) valuesEnemies[i] = reader.ReadLine().Split();
         reader.Close();
     }
 
