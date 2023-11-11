@@ -9,6 +9,7 @@ public class GameScene : MonoBehaviour{
     public Enemy[] enemies;
     public Canvas menuPause;
     private bool isPlayGame = true;
+    public bool isDialogExit = true;
 
     private void Start(){
         Settings.LoadSettings();
@@ -32,19 +33,15 @@ public class GameScene : MonoBehaviour{
     }
 
     public void SetMenuPause(){
-        if (menuPause.gameObject.activeSelf)
-            HiddenMenuPause();
-        else
-            ShowMenuPause();
+        if (menuPause.gameObject.activeSelf) HiddenMenuPause();
+        else ShowMenuPause();
     }
 
     public void DeleteEnemy(int indexEnemy){
         Destroy(enemies[indexEnemy].gameObject);
         Enemy[] newEnemies = new Enemy[enemies.Length - 1];
-        for (int i = 0; i < indexEnemy; i++)
-            newEnemies[i] = enemies[i];
-        for (int i = indexEnemy + 1; i < enemies.Length; i++)
-            newEnemies[i - 1] = enemies[i];
+        for (int i = 0; i < indexEnemy; i++) newEnemies[i] = enemies[i];
+        for (int i = indexEnemy + 1; i < enemies.Length; i++) newEnemies[i - 1] = enemies[i];
         enemies = newEnemies;
     }
 
@@ -63,16 +60,16 @@ public class GameScene : MonoBehaviour{
 
     private void LateUpdate(){
         Player player = GetComponent<Player>();
+        player.Action();
         if (Settings.isLoadGame){
             Settings.isLoadGame = false;
             LoadGame();
-        }/*
-        for (int i = 0; i < enemies.Length; i++)
-            if (enemies[i].GetHP() <= 0)
-                DeleteEnemy(i);*/
-        if (player.GetHP() == 0)
-            Settings.OpenGameOver();
-        /*else if (enemies.Length == 0)
-            Settings.OpenWin();*/
+        }
+        for (int i = 0; i < enemies.Length; i++){
+            enemies[i].Action();
+            if (enemies[i].GetHP() <= 0) DeleteEnemy(i);
+        }
+        if (player.GetHP() == 0) Settings.OpenGameOver();
+        else if (enemies.Length == 0) Settings.OpenWin();
     }
 }

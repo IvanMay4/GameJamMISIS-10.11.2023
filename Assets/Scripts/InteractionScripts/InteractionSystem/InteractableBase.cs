@@ -34,7 +34,7 @@ namespace VHS
         #region Methods
             public void OnInteract()
                 {
-            Debug.Log("Inteetegfyehfe");
+            Debug.Log("DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD");
                 }
 
         #endregion

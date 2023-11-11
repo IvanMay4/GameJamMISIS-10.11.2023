@@ -12,8 +12,7 @@ public class SettingsMenu : MonoBehaviour{
     [SerializeField] public TMP_InputField inputFieldRotationSpeed;
 
     private void Start(){
-        if (File.Exists(Settings.filenameSaveSettings))
-            Settings.LoadSettings();
+        if (File.Exists(Settings.filenameSaveSettings)) Settings.LoadSettings();
         sliderVolume.value = Settings.volume;
         inputFieldRotationSpeed.text = Settings.rotationSpeed.ToString();
     }

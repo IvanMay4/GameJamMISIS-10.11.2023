@@ -6,7 +6,7 @@ namespace VHS
 {
 
     [CreateAssetMenu(fileName ="Interactions Data", menuName = "InteractionSystem/InteractionData")]
-    public class InteractionData : MonoBehaviour
+    public class InteractionData : ScriptableObject
     {
         private InteractableBase m_interactable;
 
