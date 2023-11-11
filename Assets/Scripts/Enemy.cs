@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour{
     [SerializeField] public int maxHP = 100;
@@ -15,15 +17,16 @@ public class Enemy : MonoBehaviour{
     private void Awake(){
         currentHP = maxHP;
         rigidbody = GetComponent<Rigidbody>();
-        gameScene = FindAnyObjectByType<GameScene>();
+        if (SceneManager.GetActiveScene().name == "Game") gameScene = FindAnyObjectByType<GameMainScene>();
+        else if (SceneManager.GetActiveScene().name == "DialogTest") gameScene = FindAnyObjectByType<GameDialogScene>();
     }
 
     public int GetHP() => currentHP;
 
     public int NewHP(int value) => currentHP = value;
 
-    public void Update(){
-        if (!gameScene.GetIsPlayGame()){
+    public void Action(){
+        if (!gameScene.GetIsPlayGame() || !gameScene.isDialogExit){
             rigidbody.velocity = new Vector3(0, 0, 0);
             return;
         }
