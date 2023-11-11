@@ -1,0 +1,401 @@
+Using pre-set license
+Built from '2022.3/release' branch; Version is '2022.3.12f1 (4fe6e059c7ef) revision 5236448'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19044) 64bit Professional' Language: 'ru' Physical Memory: 15713 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\РЎСЂРµРґС‹ СЂР°Р·СЂР°Р±РѕС‚РѕРє\Р®РЅРёС‚Рё\Unity 2022.3.12f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker1
+-projectPath
+C:/Users/User/Documents/GitHub/GameJamMISIS-10.11.2023/Hakaton2
+-logFile
+Logs/AssetImportWorker1.log
+-srvPort
+52207
+Successfully changed project path to: C:/Users/User/Documents/GitHub/GameJamMISIS-10.11.2023/Hakaton2
+C:/Users/User/Documents/GitHub/GameJamMISIS-10.11.2023/Hakaton2
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [18000] Host "[IP] 10.51.3.65 [Port] 0 [Flags] 2 [Guid] 1898552816 [EditorId] 1898552816 [Version] 1048832 [Id] WindowsEditor(7,WIN-HO4L0B56MC1) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [18000] Host "[IP] 10.51.3.65 [Port] 0 [Flags] 2 [Guid] 1898552816 [EditorId] 1898552816 [Version] 1048832 [Id] WindowsEditor(7,WIN-HO4L0B56MC1) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+[Physics::Module] Initialized MultithreadedJobDispatcher with 11 workers.
+Refreshing native plugins compatible for Editor in 5.01 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.12f1 (4fe6e059c7ef)
+[Subsystems] Discovering subsystems at path C:/РЎСЂРµРґС‹ СЂР°Р·СЂР°Р±РѕС‚РѕРє/Р®РЅРёС‚Рё/Unity 2022.3.12f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/User/Documents/GitHub/GameJamMISIS-10.11.2023/Hakaton2/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3050 Ti Laptop GPU (ID=0x25a0)
+    Vendor:   NVIDIA
+    VRAM:     3976 MB
+    Driver:   31.0.15.3742
+Initialize mono
+Mono path[0] = 'C:/РЎСЂРµРґС‹ СЂР°Р·СЂР°Р±РѕС‚РѕРє/Р®РЅРёС‚Рё/Unity 2022.3.12f1/Editor/Data/Managed'
+Mono path[1] = 'C:/РЎСЂРµРґС‹ СЂР°Р·СЂР°Р±РѕС‚РѕРє/Р®РЅРёС‚Рё/Unity 2022.3.12f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/РЎСЂРµРґС‹ СЂР°Р·СЂР°Р±РѕС‚РѕРє/Р®РЅРёС‚Рё/Unity 2022.3.12f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56324
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/РЎСЂРµРґС‹ СЂР°Р·СЂР°Р±РѕС‚РѕРє/Р®РЅРёС‚Рё/Unity 2022.3.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.004472 seconds.
+- Loaded All Assemblies, in  0.292 seconds
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.234 seconds
+Domain Reload Profiling: 526ms
+	BeginReloadAssembly (88ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (29ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (50ms)
+	LoadAllAssembliesAndSetupDomain (116ms)
+		LoadAssemblies (86ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (114ms)
+			TypeCache.Refresh (113ms)
+				TypeCache.ScanAssembly (102ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (235ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (182ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (8ms)
+			SetLoadedEditorAssemblies (7ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (2ms)
+			ProcessInitializeOnLoadAttributes (121ms)
+			ProcessInitializeOnLoadMethodAttributes (44ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.526 seconds
+Refreshing native plugins compatible for Editor in 1.99 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Package Manager log level set to [2]
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.486 seconds
+Domain Reload Profiling: 1011ms
+	BeginReloadAssembly (149ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (23ms)
+	RebuildCommonClasses (29ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (37ms)
+	LoadAllAssembliesAndSetupDomain (301ms)
+		LoadAssemblies (224ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (145ms)
+			TypeCache.Refresh (129ms)
+				TypeCache.ScanAssembly (117ms)
+			ScanForSourceGeneratedMonoScriptInfo (12ms)
+			ResolveRequiredComponents (3ms)
+	FinalizeReload (486ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (355ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (5ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (55ms)
+			ProcessInitializeOnLoadAttributes (261ms)
+			ProcessInitializeOnLoadMethodAttributes (26ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 2.09 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3083 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 32 unused Assets / (57.3 KB). Loaded Objects now: 3555.
+Memory consumption went from 126.0 MB to 126.0 MB.
+Total: 2.604100 ms (FindLiveObjects: 0.260600 ms CreateObjectMapping: 0.077700 ms MarkObjects: 2.150500 ms  DeleteObjects: 0.114000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 74059.149695 seconds.
+  path: Assets/Fallen Tree Barrier - FREE/Models/Log01/Log01_Base.FBX
+  artifactKey: Guid(ac3b22926158cbe45a0414864b9ed659) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fallen Tree Barrier - FREE/Models/Log01/Log01_Base.FBX using Guid(ac3b22926158cbe45a0414864b9ed659) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a58b015ed55868491199319c8c916ab6') in 0.290373 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 16
+========================================================================
+Received Import Request.
+  Time since last request: 5.418538 seconds.
+  path: Assets/Fallen Tree Barrier - FREE/Prefabs/SceneObjects.prefab
+  artifactKey: Guid(4fd9c33f239fbb446984b1ec320a8fce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fallen Tree Barrier - FREE/Prefabs/SceneObjects.prefab using Guid(4fd9c33f239fbb446984b1ec320a8fce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5f7c77b404ec649f55f60e1c7b03028') in 0.003050 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 15
+========================================================================
+Received Import Request.
+  Time since last request: 756.765894 seconds.
+  path: Assets/Office Supplies Low Poly/Assets/FBX/Eraser.fbx
+  artifactKey: Guid(1c153fe863f3c4e618cc7810fd8fee58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Office Supplies Low Poly/Assets/FBX/Eraser.fbx using Guid(1c153fe863f3c4e618cc7810fd8fee58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5afe473c3af6ea7ae42b5169e68dba61') in 0.010968 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Office Supplies Low Poly/Assets/FBX/Pencil blue.fbx
+  artifactKey: Guid(7d805195793504284bb76dcfac433781) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Office Supplies Low Poly/Assets/FBX/Pencil blue.fbx using Guid(7d805195793504284bb76dcfac433781) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '845d8e4479541c95c7a77a6bac8e5c5d') in 0.011809 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Office Supplies Low Poly/Assets/FBX/Pen red.fbx
+  artifactKey: Guid(df0b0a058ea60429e89e34a1179f1a10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Office Supplies Low Poly/Assets/FBX/Pen red.fbx using Guid(df0b0a058ea60429e89e34a1179f1a10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a233a332b603b98654e4519f772ad74') in 0.087712 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 15
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/Office Supplies Low Poly/Assets/FBX/Hole punch.fbx
+  artifactKey: Guid(6f47f88f02593430fb76e5ac71e29eb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Office Supplies Low Poly/Assets/FBX/Hole punch.fbx using Guid(6f47f88f02593430fb76e5ac71e29eb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83e929fbf04ed35c347910af6168a85d') in 0.040392 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Office Supplies Low Poly/Assets/FBX/Stapler blue.fbx
+  artifactKey: Guid(77e0316427a8743d2bbad33aeac536ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Office Supplies Low Poly/Assets/FBX/Stapler blue.fbx using Guid(77e0316427a8743d2bbad33aeac536ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c996febb1ea715d1eb077ad11d262f8') in 0.033591 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Office Supplies Low Poly/Assets/FBX/Stapler red.fbx
+  artifactKey: Guid(2c2a53f9e92bf4669b5594d6a962585f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Office Supplies Low Poly/Assets/FBX/Stapler red.fbx using Guid(2c2a53f9e92bf4669b5594d6a962585f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e7dc8dcfd94ef01ef4f2372f6d59fb2') in 0.012998 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Office Supplies Low Poly/Assets/FBX/Legal pad.fbx
+  artifactKey: Guid(a8fbe669bb32640fa9ae0bfb1086fecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Office Supplies Low Poly/Assets/FBX/Legal pad.fbx using Guid(a8fbe669bb32640fa9ae0bfb1086fecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0808b2174cde041d291fdc6f3dc49e54') in 0.012037 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Office Supplies Low Poly/Assets/FBX/Scissors black.fbx
+  artifactKey: Guid(104afd0ebfdc44108b1d4fb97aeaf769) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Office Supplies Low Poly/Assets/FBX/Scissors black.fbx using Guid(104afd0ebfdc44108b1d4fb97aeaf769) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ef9653494f7957580ea7cf92130e0b0') in 0.020085 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 15
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Office Supplies Low Poly/Assets/FBX/Pencil red.fbx
+  artifactKey: Guid(55671bcf5267244a1a590ffb6bc77964) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Office Supplies Low Poly/Assets/FBX/Pencil red.fbx using Guid(55671bcf5267244a1a590ffb6bc77964) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0de35e814b7948f8ce2d9f1a73ae09fe') in 0.009736 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Office Supplies Low Poly/Assets/FBX/Sticky notes blue.fbx
+  artifactKey: Guid(5a3764128a5414cad9e3f0d3d3c5014e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Office Supplies Low Poly/Assets/FBX/Sticky notes blue.fbx using Guid(5a3764128a5414cad9e3f0d3d3c5014e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f45eea2f8da08adc93e76b464fa9b3cd') in 0.007543 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Office Supplies Low Poly/Assets/FBX/Sticky notes green.fbx
+  artifactKey: Guid(ce36f85459251406b8ca1ea00072e807) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Office Supplies Low Poly/Assets/FBX/Sticky notes green.fbx using Guid(ce36f85459251406b8ca1ea00072e807) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45c0458954b9fcafb5fe779aa768ae6b') in 0.013639 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Office Supplies Low Poly/Assets/FBX/Highlighter pen green.fbx
+  artifactKey: Guid(f72af9046e91c478da8cfab52027ff57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Office Supplies Low Poly/Assets/FBX/Highlighter pen green.fbx using Guid(f72af9046e91c478da8cfab52027ff57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c58d95e0113f73182c4101339d78242') in 0.020976 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 15
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Office Supplies Low Poly/Assets/FBX/Pencil black.fbx
+  artifactKey: Guid(2ce3f87ced8e34faa8f4e7b415bd3380) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Office Supplies Low Poly/Assets/FBX/Pencil black.fbx using Guid(2ce3f87ced8e34faa8f4e7b415bd3380) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef2aa53ba8803e59b845ba00b2eacc55') in 0.008663 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Office Supplies Low Poly/Assets/FBX/Highlighter pen yellow.fbx
+  artifactKey: Guid(df89f2300832849029a10573447b30f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Office Supplies Low Poly/Assets/FBX/Highlighter pen yellow.fbx using Guid(df89f2300832849029a10573447b30f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '192dcdadf304d5023a3f54551208c7fe') in 0.026189 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 15
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Office Supplies Low Poly/Assets/FBX/Pencil sharpener large.fbx
+  artifactKey: Guid(64f339989f1724c42bf7625edf00f0e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Office Supplies Low Poly/Assets/FBX/Pencil sharpener large.fbx using Guid(64f339989f1724c42bf7625edf00f0e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fb21c1913dc6d2bec0d2d696de69c5f') in 0.034664 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 20
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Office Supplies Low Poly/Assets/FBX/Pen green.fbx
+  artifactKey: Guid(ef17dc6d5875548089b2f06a00206c18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Office Supplies Low Poly/Assets/FBX/Pen green.fbx using Guid(ef17dc6d5875548089b2f06a00206c18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd42688b93ac93dea19056a92ff34a737') in 0.020363 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 15
+========================================================================
+Received Import Request.
+  Time since last request: 7.162659 seconds.
+  path: Assets/Office Supplies Low Poly/Assets/Prefabs/Highlighter pen blue.prefab
+  artifactKey: Guid(c023af939834e46cf86badfc7ff712d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Office Supplies Low Poly/Assets/Prefabs/Highlighter pen blue.prefab using Guid(c023af939834e46cf86badfc7ff712d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81dc84938b0538fee782c8f4607ccbed') in 0.009496 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 16
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/Office Supplies Low Poly/Assets/Prefabs/Pen black.prefab
+  artifactKey: Guid(b2ba957224087475eb7804e492ea272e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Office Supplies Low Poly/Assets/Prefabs/Pen black.prefab using Guid(b2ba957224087475eb7804e492ea272e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a8e0dc22b4ea97096bb099452883fd4') in 0.006283 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 16
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Office Supplies Low Poly/Assets/Prefabs/Sticky_note_red.prefab
+  artifactKey: Guid(9390ad148e2dd4245ad2dc9d3629e319) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Office Supplies Low Poly/Assets/Prefabs/Sticky_note_red.prefab using Guid(9390ad148e2dd4245ad2dc9d3629e319) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0ce0c802aabc6b566cc377ea5f8fdd3') in 0.013648 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Office Supplies Low Poly/Assets/Prefabs/Highlighter pen green.prefab
+  artifactKey: Guid(01a9109d2ae204b34973b0a645f204e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Office Supplies Low Poly/Assets/Prefabs/Highlighter pen green.prefab using Guid(01a9109d2ae204b34973b0a645f204e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9545463954724e8cfa14dc9edae565f6') in 0.058215 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 16
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Office Supplies Low Poly/Assets/Prefabs/Scissors red.prefab
+  artifactKey: Guid(4eda41d20c3564ad789494e2a0e9babb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Office Supplies Low Poly/Assets/Prefabs/Scissors red.prefab using Guid(4eda41d20c3564ad789494e2a0e9babb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e928dd64fe39e0990563ac7b9e0066c0') in 0.010086 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 16
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Office Supplies Low Poly/Assets/Prefabs/Tape dispenser.prefab
+  artifactKey: Guid(99d4c8645da7e43e8ac08906d7ec2948) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Office Supplies Low Poly/Assets/Prefabs/Tape dispenser.prefab using Guid(99d4c8645da7e43e8ac08906d7ec2948) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6487faf05f3f7b19e9bf99f1dbd267d') in 0.043612 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 16
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/Office Supplies Low Poly/Assets/Prefabs/Scissors yellow.prefab
+  artifactKey: Guid(4fa2ca3d6de804971ba571eeeb10e2af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Office Supplies Low Poly/Assets/Prefabs/Scissors yellow.prefab using Guid(4fa2ca3d6de804971ba571eeeb10e2af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e5bd25afee621eae80a10641c957eab') in 0.049020 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 16
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Office Supplies Low Poly/Assets/Prefabs/Scissors black.prefab
+  artifactKey: Guid(07f9048ddafe046b893ea5846d9de1f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Office Supplies Low Poly/Assets/Prefabs/Scissors black.prefab using Guid(07f9048ddafe046b893ea5846d9de1f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85977c5569759f7a88cc888c7d3507d8') in 0.009308 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 16
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Office Supplies Low Poly/Assets/Prefabs/Sticky_note_green.prefab
+  artifactKey: Guid(678004df39bc84cb7ab05ea3306e7d6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Office Supplies Low Poly/Assets/Prefabs/Sticky_note_green.prefab using Guid(678004df39bc84cb7ab05ea3306e7d6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0eaa509905db210d7dc1fd2c16eb31f') in 0.033313 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 9
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: Операция ввода/вывода была прервана из-за завершения потока команд или по запросу приложения.
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
