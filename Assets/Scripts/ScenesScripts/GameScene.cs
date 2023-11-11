@@ -9,6 +9,10 @@ public class GameScene : MonoBehaviour{
     public Canvas menuPause;
     private bool isPlayGame = true;
 
+    private void Start(){
+        Settings.LoadSettings();
+    }
+
     public bool GetIsPlayGame() => isPlayGame;
 
     public void PlayGame() => isPlayGame = true;

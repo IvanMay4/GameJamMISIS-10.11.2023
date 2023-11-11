@@ -11,7 +11,6 @@ public class Player : MonoBehaviour{
     private int currentHP = 0;
     [SerializeField] public float speed = 4f;
     [SerializeField] public float jumpSpeed = 4f;
-    [SerializeField] public float rotationSpeed = 10f;
     [SerializeField] public int maxJumps = 1;
     private int currentJumps;
     [SerializeField] private TMP_Text textValueHP;
@@ -65,7 +64,8 @@ public class Player : MonoBehaviour{
             return;
         }
         move = new Vector3(Input.GetAxis("Horizontal") * speed, rigidbody.velocity.y, Input.GetAxis("Vertical") * speed);
-        transform.rotation *= Quaternion.Euler(0, (Input.GetKey(KeyCode.Q)? -1: Input.GetKey(KeyCode.E)? 1: 0) * Time.deltaTime * rotationSpeed, 0);
+        transform.rotation *= Quaternion.Euler(Input.GetAxis("Mouse Y") * Time.deltaTime * Settings.rotationSpeed, Input.GetAxis("Mouse X") * Time.deltaTime * Settings.rotationSpeed, 0);
+        transform.rotation = Quaternion.Euler(Math.Max(Math.Min(Math.Abs(transform.rotation.eulerAngles.x - 360) < 25f? transform.rotation.eulerAngles.x - 360: transform.rotation.eulerAngles.x, 25f), -10f), transform.rotation.eulerAngles.y, 0);
         if (Input.GetKeyDown(KeyCode.H))
             GetHeal(10);
         if (Input.GetKeyDown(KeyCode.Space) && currentJumps > 0){

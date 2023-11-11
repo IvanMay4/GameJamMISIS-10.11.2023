@@ -7,6 +7,7 @@ using UnityEngine;
 public static class Saver{
     public static float volume;
     public static int levelComplexity;
+    public static float rotationSpeed;
     public static string[] valuesPlayer;
     public static string[][] valuesEnemies;
 
@@ -22,7 +23,7 @@ public static class Saver{
 
     public static void SaveSettings(){
         StreamWriter writer = new StreamWriter(Settings.filenameSaveSettings);
-        writer.WriteLine(Settings.volume + " " + Settings.levelComplexity);
+        writer.WriteLine(Settings.volume + " " + Settings.levelComplexity + " " + Settings.rotationSpeed);
         writer.Close();
     }
 
@@ -41,6 +42,7 @@ public static class Saver{
         string[] valuesSettings = reader.ReadLine().Split();
         volume = (float)Convert.ToDouble(valuesSettings[0]);
         levelComplexity = Convert.ToInt32(valuesSettings[1]);
+        rotationSpeed = (float)Convert.ToDouble(valuesSettings[2]);
         reader.Close();
     }
 }
