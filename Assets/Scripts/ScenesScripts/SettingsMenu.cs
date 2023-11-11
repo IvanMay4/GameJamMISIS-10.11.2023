@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -8,24 +9,29 @@ using UnityEngine.UI;
 public class SettingsMenu : MonoBehaviour{
     [SerializeField] public Slider sliderVolume;
     [SerializeField] public TMP_Text textValueComplexity;
+    [SerializeField] public TMP_InputField inputFieldRotationSpeed;
 
     private void Start(){
-        if (!File.Exists(Settings.filenameSaveSettings))
-            return;
-        Saver.LoadSettings();
-        Settings.volume = Saver.volume;
-        Settings.levelComplexity = Saver.levelComplexity;
+        if (File.Exists(Settings.filenameSaveSettings))
+            Settings.LoadSettings();
+        sliderVolume.value = Settings.volume;
+        inputFieldRotationSpeed.text = Settings.rotationSpeed.ToString();
     }
 
     private void LateUpdate(){
-        if (Settings.isEnterSettings){
-            sliderVolume.value = Settings.volume;
-            Settings.isEnterSettings = false;
-            return;
-        }
         Settings.volume = sliderVolume.value;
         textValueComplexity.text = Settings.levelComplexity == 1 ? "Лёгкий" : Settings.levelComplexity == 2 ? "Средний" : Settings.levelComplexity == 3 ? "Тяжёлый" : "None";
         textValueComplexity.color = Settings.levelComplexity == 1 ? Color.green : Settings.levelComplexity == 2 ? Color.yellow : Settings.levelComplexity == 3 ? Color.red : Color.white;
+        Saver.SaveSettings();
+    }
+
+    public void NewRotationSpeed(){
+        double tmp = 0f;
+        if (!double.TryParse(inputFieldRotationSpeed.text, out tmp)){
+            inputFieldRotationSpeed.text = Settings.rotationSpeed.ToString();
+            return;
+        }
+        Settings.rotationSpeed = (float)Convert.ToDouble(inputFieldRotationSpeed.text);
         Saver.SaveSettings();
     }
 

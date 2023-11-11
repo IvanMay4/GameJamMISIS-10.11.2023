@@ -9,20 +9,25 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using static UnityEngine.EventSystems.EventTrigger;
 
 public static class Settings{
     public static float volume = 1;
     public static int levelComplexity = 1;
-    public static bool isEnterSettings = false;
+    public static float rotationSpeed = 10f;
     public static bool isLoadGame = false;
     public static string filenameSaveGame = "SaveGame.txt";
     public static string filenameSaveSettings = "SaveSettings.txt";
 
     public static void OpenMainMenu() => SceneManager.LoadScene("Main");
 
-    public static void OpenSettings(){
-        isEnterSettings = true;
-        SceneManager.LoadScene("Settings");
+    public static void OpenSettings() => SceneManager.LoadScene("Settings");
+
+    public static void LoadSettings(){
+        Saver.LoadSettings();
+        volume = Saver.volume;
+        levelComplexity = Saver.levelComplexity;
+        rotationSpeed = Saver.rotationSpeed;
     }
 
     public static void OpenGame() => SceneManager.LoadScene("Game");
