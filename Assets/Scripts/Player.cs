@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using TMPro.EditorUtilities;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -20,6 +21,7 @@ public class Player : MonoBehaviour{
     private Vector3 move;
     [SerializeField] private new Camera camera;
     [SerializeField] private Canvas menuPause;
+    [SerializeField] private Canvas inventory;
 
     private void Awake(){
         SetHP(maxHP);
@@ -28,6 +30,7 @@ public class Player : MonoBehaviour{
         this.AddComponent<GameScene>();
         gameScene = GetComponent<GameScene>();
         gameScene.menuPause = menuPause;
+        inventory.gameObject.SetActive(false);
     }
 
     public int GetHP() => currentHP;
@@ -73,11 +76,16 @@ public class Player : MonoBehaviour{
             move.y = (jumpSpeed - Physics.gravity.y);
         }
         rigidbody.velocity = Quaternion.Euler(0, camera.transform.rotation.eulerAngles.y, 0) * move;
+        if (Input.GetKeyDown(KeyCode.I))
+            inventory.gameObject.SetActive(!inventory.gameObject.activeSelf);
     }
 
     private void OnCollisionEnter(Collision collision){
         if (collision.gameObject.CompareTag("Ground"))
             currentJumps = maxJumps;
+        if (collision.gameObject.CompareTag("Item"))
+            if (CollectItem(collision.gameObject.GetComponent<Item>()))
+                Destroy(collision.gameObject);
     }
 
     public void Continue() => gameScene.HiddenMenuPause();
@@ -85,4 +93,14 @@ public class Player : MonoBehaviour{
     public void ExitMainMenu() => Settings.OpenMainMenu();
 
     public void Save() => Saver.SaveGame(gameScene);
+
+    public bool CollectItem(Item item){
+        ItemUI[] items = inventory.GetComponentsInChildren<ItemUI>();
+        for(int i = 0;i < items.Length; i++)
+            if (!items[i].isOccupied){
+                items[i].Occupied(item);
+                return true;
+            }
+        return false;
+    }
 }
