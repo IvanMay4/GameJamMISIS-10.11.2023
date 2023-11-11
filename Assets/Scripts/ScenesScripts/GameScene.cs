@@ -12,6 +12,7 @@ public class GameScene : MonoBehaviour{
 
     private void Start(){
         Settings.LoadSettings();
+        menuPause.gameObject.SetActive(false);
     }
 
     public bool GetIsPlayGame() => isPlayGame;
