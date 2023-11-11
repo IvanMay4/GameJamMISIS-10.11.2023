@@ -67,7 +67,7 @@ public class Player : MonoBehaviour{
             return;
         }
         move = new Vector3(Input.GetAxis("Horizontal") * speed, rigidbody.velocity.y, Input.GetAxis("Vertical") * speed);
-        transform.rotation *= Quaternion.Euler(Input.GetAxis("Mouse Y") * Time.deltaTime * Settings.rotationSpeed, Input.GetAxis("Mouse X") * Time.deltaTime * Settings.rotationSpeed, 0);
+        transform.rotation *= Quaternion.Euler(-Input.GetAxis("Mouse Y") * Time.deltaTime * Settings.rotationSpeed, Input.GetAxis("Mouse X") * Time.deltaTime * Settings.rotationSpeed, 0);
         transform.rotation = Quaternion.Euler(Math.Max(Math.Min(Math.Abs(transform.rotation.eulerAngles.x - 360) < 25f? transform.rotation.eulerAngles.x - 360: transform.rotation.eulerAngles.x, 25f), -10f), transform.rotation.eulerAngles.y, 0);
         if (Input.GetKeyDown(KeyCode.H))
             GetHeal(10);
