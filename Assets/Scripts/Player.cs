@@ -29,14 +29,14 @@ public class Player : MonoBehaviour{
         SetHP(maxHP);
         currentJumps = maxJumps;
         rigidbody = GetComponent<Rigidbody>();
-        if (SceneManager.GetActiveScene().name == "Game"){
+        if (SceneManager.GetActiveScene().name == "DialogTest"){
+            this.AddComponent<GameDialogScene>();
+            gameScene = GetComponent<GameDialogScene>();
+        }
+        else{
             this.AddComponent<GameMainScene>();
             gameScene = GetComponent<GameMainScene>();
             dialogMenu.gameObject.SetActive(false);
-        }
-        else if (SceneManager.GetActiveScene().name == "DialogTest"){
-            this.AddComponent<GameDialogScene>();
-            gameScene = GetComponent<GameDialogScene>();
         }
         gameScene.menuPause = menuPause;
         inventory.gameObject.SetActive(false);
