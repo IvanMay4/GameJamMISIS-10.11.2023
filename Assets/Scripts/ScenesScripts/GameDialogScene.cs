@@ -18,6 +18,6 @@ public class GameDialogScene : GameScene{
 
     public void Variant2(){
         isDialogExit = true;
-        FindAnyObjectByType<Player>().GetDamage(FindAnyObjectByType<Player>().maxHP);
+        
     }
 }

@@ -14,8 +14,5 @@ public class Laser : MonoBehaviour{
         transform.position = new Vector3(0, 0, transform.position.z + speed * direction);
     }
 
-    private void OnCollisionEnter(Collision collision){
-        if (collision.gameObject.CompareTag("Player"))
-            collision.gameObject.GetComponent<Player>().GetDamage(10);
-    }
+    
 }

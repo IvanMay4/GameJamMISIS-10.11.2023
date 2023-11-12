@@ -48,7 +48,6 @@ public class GameScene : MonoBehaviour{
         player.transform.position = new Vector3((float)Convert.ToDouble(Saver.valuesPlayer[0]), (float)Convert.ToDouble(Saver.valuesPlayer[1]), (float)Convert.ToDouble(Saver.valuesPlayer[2]));
         player.transform.eulerAngles = new Vector3(0, (float)Convert.ToDouble(Saver.valuesPlayer[3]), 0);
         player.SetCurrentJumps(Convert.ToInt32(Saver.valuesPlayer[4]));
-        player.NewHP(Convert.ToInt32(Saver.valuesPlayer[5]));
     }
 
     private void LateUpdate(){
