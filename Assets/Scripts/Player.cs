@@ -45,7 +45,6 @@ public class Player : MonoBehaviour{
             gameScene = GetComponent<GameSimpleScene>();
         }
         gameScene.menuPause = menuPause;
-        inventory.gameObject.SetActive(false);
         gameScene.gameMusic = gameMusic;
         gameScene.pauseMusic = pauseMusic;
 
