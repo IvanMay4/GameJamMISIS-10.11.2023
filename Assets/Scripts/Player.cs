@@ -24,23 +24,66 @@ public class Player : MonoBehaviour{
     [SerializeField] private Canvas menuPause;
     [SerializeField] private Canvas inventory;
     [SerializeField] private Canvas dialogMenu;
+    [SerializeField] private Canvas fader;
+    private bool isFade = false;
+    private bool isDimme = false;
+    private int cooldownFader = 120;
+    private int timeFader = 0;
 
     private void Awake(){
         SetHP(maxHP);
         currentJumps = maxJumps;
         rigidbody = GetComponent<Rigidbody>();
-        if (SceneManager.GetActiveScene().name == "Game"){
-            this.AddComponent<GameMainScene>();
-            gameScene = GetComponent<GameMainScene>();
-            dialogMenu.gameObject.SetActive(false);
-        }
-        else if (SceneManager.GetActiveScene().name == "DialogTest"){
+        if (SceneManager.GetActiveScene().name == "DialogTest"){
             this.AddComponent<GameDialogScene>();
             gameScene = GetComponent<GameDialogScene>();
+            dialogMenu.gameObject.SetActive(true);
+        }
+        else{
+            this.AddComponent<GameSimpleScene>();
+            gameScene = GetComponent<GameSimpleScene>();
         }
         gameScene.menuPause = menuPause;
-        inventory.gameObject.SetActive(false);
     }
+
+    public void Fade(){
+        if (!isFade) return;
+        Color color = fader.GetComponentInChildren<Image>().color;
+        if(timeFader == cooldownFader){
+            timeFader = 0;
+            color.a = 0;
+            fader.GetComponentInChildren<Image>().color = color;
+            isFade = false;
+            gameScene.PlayGame();
+            return;
+        }
+        timeFader++;
+        color.a -= 1f / cooldownFader;
+        fader.GetComponentInChildren<Image>().color = color;
+    }
+
+    public void Dimme(){
+        if (!isDimme) return;
+        Color color = fader.GetComponentInChildren<Image>().color;
+        if (timeFader == cooldownFader){
+            timeFader = 0;
+            color.a = 1;
+            fader.GetComponentInChildren<Image>().color = color;
+            isDimme = false;
+            gameScene.StopGame();
+            return;
+        }
+        timeFader++;
+        color.a += 1f / cooldownFader;
+        fader.GetComponentInChildren<Image>().color = color;
+    }
+
+    public void ActivateFade(){
+        isFade = true;
+        gameScene.StopGame();
+    }
+
+    public void ActivateDimme() => isDimme = true;
 
     public int GetHP() => currentHP;
 
@@ -65,6 +108,8 @@ public class Player : MonoBehaviour{
     public void SetCurrentJumps(int countJumps) => currentJumps = countJumps;
 
     public void IndependentAction(){
+        Fade();
+        Dimme();
         if (Input.GetKeyDown(KeyCode.Escape)) gameScene.SetMenuPause();
     }
 
