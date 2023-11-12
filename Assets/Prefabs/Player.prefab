@@ -93,7 +93,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7443598209925114769
 Transform:
   m_ObjectHideFlags: 0
@@ -644,7 +644,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3769842005678784838}
   - component: {fileID: 8386266235032250056}
-  - component: {fileID: 8022283481968916626}
   - component: {fileID: 7564496040619234758}
   - component: {fileID: -8295484086101172138}
   m_Layer: 0
@@ -700,20 +699,6 @@ MonoBehaviour:
   inventory: {fileID: 3344448354284428390}
   dialogMenu: {fileID: 4008929954543354467}
   fader: {fileID: 8088320226986581441}
---- !u!114 &8022283481968916626
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 695300311476827514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 645bd2746ce18be4e954fcb44471fdcb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy: {fileID: 1564909247857334437, guid: f82b0ff1add992c4fbbadb80cc40f3cd, type: 3}
-  countEnemy: 10
 --- !u!136 &7564496040619234758
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4061,7 +4046,7 @@ RectTransform:
   m_Father: {fileID: 862168771298773786}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5700,7 +5685,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7765526041134182037
 RectTransform:
   m_ObjectHideFlags: 0
