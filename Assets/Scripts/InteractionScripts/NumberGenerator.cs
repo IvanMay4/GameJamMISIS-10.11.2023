@@ -12,7 +12,7 @@ public class NumberGenerator : MonoBehaviour, IInteractable
 
     IEnumerator SceneLoader()
     {
-        yield return new WaitForSeconds(3);
-        SceneManager.LoadScene(1);
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene("room_2");
     }
 }

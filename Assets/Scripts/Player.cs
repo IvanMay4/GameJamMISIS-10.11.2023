@@ -131,7 +131,7 @@ public class Player : MonoBehaviour{
         if (Input.GetKeyDown(KeyCode.H)) GetHeal(10);
         if (Input.GetKeyDown(KeyCode.Space) && currentJumps > 0){
             currentJumps--;
-            move.y = (jumpSpeed - Physics.gravity.y);
+            move.y = jumpSpeed;
         }
         rigidbody.velocity = Quaternion.Euler(0, camera.transform.rotation.eulerAngles.y, 0) * move;
         if (Input.GetKeyDown(KeyCode.I)) inventory.gameObject.SetActive(!inventory.gameObject.activeSelf);

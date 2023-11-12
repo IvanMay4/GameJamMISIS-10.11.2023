@@ -76,7 +76,5 @@ public class GameScene : MonoBehaviour{
             enemies[i].Action();
             if (enemies[i].GetHP() <= 0) DeleteEnemy(i);
         }
-        if (player.GetHP() == 0) Settings.OpenGameOver();
-        else if (enemies.Length == 0) Settings.OpenWin();
     }
 }
