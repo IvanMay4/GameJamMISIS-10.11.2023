@@ -30,11 +30,8 @@ public static class Settings{
         rotationSpeed = Saver.rotationSpeed;
     }
 
-    public static void OpenGame() => SceneManager.LoadScene("Game");
+    public static void OpenGame() => SceneManager.LoadScene("Location_1");
 
-    public static void OpenWin() => SceneManager.LoadScene("Win");
-
-    public static void OpenGameOver() => SceneManager.LoadScene("GameOver");
 
     public static void Exit() => Application.Quit();
 
