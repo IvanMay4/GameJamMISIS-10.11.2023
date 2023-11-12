@@ -18,6 +18,7 @@ public class Enemy : MonoBehaviour{
         currentHP = maxHP;
         rigidbody = GetComponent<Rigidbody>();
 
+<<<<<<< Updated upstream
 
         if (SceneManager.GetActiveScene().name == "Game") gameScene = FindAnyObjectByType<GameMainScene>();
 
@@ -25,6 +26,14 @@ public class Enemy : MonoBehaviour{
 
         else if (SceneManager.GetActiveScene().name == "DialogTest") gameScene = FindAnyObjectByType<GameDialogScene>();
 
+=======
+        if (SceneManager.GetActiveScene().name == "Game") gameScene = FindAnyObjectByType<GameMainScene>();
+        else if (SceneManager.GetActiveScene().name == "DialogTest") gameScene = FindAnyObjectByType<GameDialogScene>();
+
+        if (SceneManager.GetActiveScene().name == "DialogTest") gameScene = FindAnyObjectByType<GameDialogScene>();
+        else gameScene = FindAnyObjectByType<GameSimpleScene>();
+
+>>>>>>> Stashed changes
     }
 
     public int GetHP() => currentHP;
