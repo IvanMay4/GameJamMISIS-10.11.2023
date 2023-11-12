@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class NumberGenerator : MonoBehaviour, IInteractable
 {
+    public AudioSource treeSound;
     public void Interact()
     {
         StartCoroutine(SceneLoader());
@@ -17,7 +18,8 @@ public class NumberGenerator : MonoBehaviour, IInteractable
 
     IEnumerator SceneLoader()
     {
-        yield return new WaitForSeconds(1);
+        treeSound.Play();
+        yield return new WaitForSeconds(2);
         SceneManager.LoadScene("room_2");
     }
 }
