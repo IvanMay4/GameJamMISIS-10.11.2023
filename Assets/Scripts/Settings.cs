@@ -32,7 +32,6 @@ public static class Settings{
 
     public static void OpenGame() => SceneManager.LoadScene("Location_1");
 
-
     public static void Exit() => Application.Quit();
 
     public static void DeleteFile(string filename) => new FileInfo(@$"{filename}").Delete();
