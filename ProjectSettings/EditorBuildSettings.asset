@@ -9,17 +9,26 @@ EditorBuildSettings:
     path: Assets/Scenes/FirstLocation.unity
     guid: 931c4a895ffae9a47bdae90f6ed19a2f
   - enabled: 1
-    path: Assets/Scenes/Menu/Main.unity
-    guid: e747b3b8b4e3e8b43b6d05825216dad9
-  - enabled: 1
     path: Assets/Scenes/Menu/Settings.unity
     guid: 619218bef3481414a89c79ae759a0d39
+  - enabled: 1
+    path: Assets/Scenes/room_2.unity
+    guid: b9036d776c4a150418c3ccf3d53c237a
+  - enabled: 1
+    path: Assets/Scenes/Menu/Main.unity
+    guid: e747b3b8b4e3e8b43b6d05825216dad9
   - enabled: 1
     path: Assets/Scenes/Game.unity
     guid: e53016a86ecde0c428e57715d1d729f6
   - enabled: 1
+    path: Assets/Scenes/TransionOnSecondLevel.unity
+    guid: 6f6922365ce97aa43955477eb78680be
+  - enabled: 1
     path: Assets/Scenes/Win.unity
     guid: cff1416465ae0654fb8dc3cb0e8fcdef
+  - enabled: 1
+    path: Assets/Scenes/GameIvanMay.unity
+    guid: 1cdd504f5e604624fa4336c2e09fed24
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 8becfeafa71527c4e8af967fac3a3bbc
