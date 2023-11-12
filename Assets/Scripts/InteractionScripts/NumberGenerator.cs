@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class NumberGenerator : MonoBehaviour, IInteractable
 {
     public AudioSource treeSound;
+    
     public void Interact()
     {
         StartCoroutine(SceneLoader());
@@ -22,4 +23,6 @@ public class NumberGenerator : MonoBehaviour, IInteractable
         yield return new WaitForSeconds(2);
         SceneManager.LoadScene("room_2");
     }
+
+
 }
