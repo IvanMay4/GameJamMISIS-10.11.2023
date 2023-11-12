@@ -384,7 +384,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8386266235032250056, guid: f84cbacf7fd823945bd805d3ac7c298f, type: 3}
       propertyPath: jumpSpeed
-      value: 0.25
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8517950246846478681, guid: f84cbacf7fd823945bd805d3ac7c298f, type: 3}
       propertyPath: m_AnchorMax.y
