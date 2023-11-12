@@ -17,8 +17,14 @@ public class Enemy : MonoBehaviour{
     private void Awake(){
         currentHP = maxHP;
         rigidbody = GetComponent<Rigidbody>();
+
+
+        if (SceneManager.GetActiveScene().name == "Game") gameScene = FindAnyObjectByType<GameMainScene>();
+
         if (SceneManager.GetActiveScene().name == "Game") gameScene = FindAnyObjectByType<GameSimpleScene>();
+
         else if (SceneManager.GetActiveScene().name == "DialogTest") gameScene = FindAnyObjectByType<GameDialogScene>();
+
     }
 
     public int GetHP() => currentHP;

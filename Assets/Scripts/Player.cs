@@ -17,6 +17,8 @@ public class Player : MonoBehaviour{
     private int currentJumps;
     [SerializeField] private TMP_Text textValueHP;
     [SerializeField] private Scrollbar scrollbarHP;
+    [SerializeField] public AudioSource gameMusic;
+    [SerializeField] public AudioSource pauseMusic;
     private new Rigidbody rigidbody;
     private GameScene gameScene;
     private Vector3 move;
@@ -44,6 +46,10 @@ public class Player : MonoBehaviour{
             gameScene = GetComponent<GameSimpleScene>();
         }
         gameScene.menuPause = menuPause;
+        inventory.gameObject.SetActive(false);
+        gameScene.gameMusic = gameMusic;
+        gameScene.pauseMusic = pauseMusic;
+
     }
 
     public void Fade(){
