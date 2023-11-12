@@ -18,8 +18,10 @@ public class MainMenu : MonoBehaviour{
 
     public void DeleteProgress() => Settings.DeleteFile(Settings.filenameSaveGame);
 
+    public void EnterSettings() => Settings.OpenSettings();
+
     public void LoadGame(){
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Location_1");
         Settings.isLoadGame = true;
         Saver.LoadGame();
     }
