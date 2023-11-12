@@ -2,5 +2,5 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameMainScene : GameScene{
+public class GameSimpleScene : GameScene{
 }
