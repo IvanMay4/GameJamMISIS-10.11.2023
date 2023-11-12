@@ -6,6 +6,7 @@ using UnityEngine;
 interface IInteractable
 {
     public void Interact();
+    public void OnInteract();
 }
 public class InventoryItemBase : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class InventoryItemBase : MonoBehaviour
                 if (hitInfo.collider.gameObject.TryGetComponent(out IInteractable interactObj))
                 {
                     interactObj.Interact();
+                    interactObj.OnInteract();
                 }
             }
         }
