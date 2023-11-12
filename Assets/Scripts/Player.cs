@@ -22,7 +22,6 @@ public class Player : MonoBehaviour{
     private Vector3 move;
     [SerializeField] private new Camera camera;
     [SerializeField] private Canvas menuPause;
-    [SerializeField] private Canvas inventory;
     [SerializeField] private Canvas dialogMenu;
     [SerializeField] private Canvas fader;
     private bool isFade = false;
@@ -113,6 +112,11 @@ public class Player : MonoBehaviour{
         if (Input.GetKeyDown(KeyCode.Escape)) gameScene.SetMenuPause();
     }
 
+    public void NewMaxJumps(int jumps){
+        maxJumps = jumps;
+        currentJumps = maxJumps;
+    }
+
     public void Action(){
         IndependentAction();
         if (!gameScene.GetIsPlayGame() || !gameScene.isDialogExit){
@@ -125,17 +129,13 @@ public class Player : MonoBehaviour{
         if (Input.GetKeyDown(KeyCode.H)) GetHeal(10);
         if (Input.GetKeyDown(KeyCode.Space) && currentJumps > 0){
             currentJumps--;
-            move.y = (jumpSpeed - Physics.gravity.y);
+            move.y = jumpSpeed;
         }
         rigidbody.velocity = Quaternion.Euler(0, camera.transform.rotation.eulerAngles.y, 0) * move;
-        if (Input.GetKeyDown(KeyCode.I)) inventory.gameObject.SetActive(!inventory.gameObject.activeSelf);
     }
 
     private void OnCollisionEnter(Collision collision){
         if (collision.gameObject.CompareTag("Ground")) currentJumps = maxJumps;
-        if (collision.gameObject.CompareTag("Item"))
-            if (CollectItem(collision.gameObject.GetComponent<Item>()))
-                Destroy(collision.gameObject);
     }
 
     public void Continue() => gameScene.HiddenMenuPause();
@@ -143,16 +143,6 @@ public class Player : MonoBehaviour{
     public void ExitMainMenu() => Settings.OpenMainMenu();
 
     public void Save() => Saver.SaveGame(gameScene);
-
-    public bool CollectItem(Item item){
-        ItemUI[] items = inventory.GetComponentsInChildren<ItemUI>();
-        for(int i = 0;i < items.Length; i++)
-            if (!items[i].isOccupied){
-                items[i].Occupied(item);
-                return true;
-            }
-        return false;
-    }
 
     public void ChoiceDialogVariant(int number){
         gameScene.GetComponent<GameDialogScene>().ChoiceVariant(number);
