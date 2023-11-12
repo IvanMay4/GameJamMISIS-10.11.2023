@@ -35,4 +35,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DialogTest.unity
     guid: 3b20be5ff24760c4daf3e759f785dd93
+  - enabled: 1
+    path: Assets/Scenes/Scenes/Location_1.unity
+    guid: 7769f33fb4fa2e5458344a36556ad760
+  - enabled: 1
+    path: Assets/Scenes/Scenes/Location_4.unity
+    guid: 535d2d282de01f544b0d5b37d47ff11d
+  - enabled: 1
+    path: Assets/Scenes/Coridor.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}
